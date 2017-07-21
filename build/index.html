@@ -1,0 +1,106 @@
+
+<!--g- (global) префикс для глобальных классов. (Например, для задания невидимых элементов g-hidden.)-->
+<!--b- (block) префикс для выделения элементов, относящихся к структуре документа. -->
+<!--js- (JavaScript) префикс для выделения элементов для селекторов js. --><!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Awesome Description Here">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <title>Markup | Главная</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500,900" rel="stylesheet">
+  </head>
+  <body>
+    <div class="nine-lines">
+      <section class="questionary">
+        <div class="questionary-logo"><img class="logo-img" src="images/logo.png" alt=""></div>
+        <form class="questionary-form">
+          <input class="form-name-line" type="text" placeholder="ИМЯ" value="Nikita">
+          <input class="form-date-line" type="text" placeholder="ДАТА РОЖДЕНИЯ" value="18.02.1990">
+          <input class="form-city-line" type="text" placeholder="ГОРОД" value="Ulyanovsk">
+          <input class="form-contacts-line" type="text" placeholder="КОНТАКТНЫЕ ДАННЫЕ" value="nikitakalachev18@gmail.com">
+        </form>
+        <div class="questionary-img"><img class="postlogo-img" src="images/postlogo.png" alt=""></div>
+      </section>
+      <section class="skills">
+        <div class="skills-header">
+          <p class="skills-title">Навыки</p>
+        </div>
+        <form class="skills-form">
+                    <div class="skills-mix">
+                      <input class="skills-input" id="html5" type="checkbox" checked value="" hidden>
+                      <label class="skills-label" for="html5">html5</label>
+                    </div>
+                    <div class="skills-mix">
+                      <input class="skills-input" id="sass" type="checkbox" checked value="" hidden>
+                      <label class="skills-label" for="sass">sass</label>
+                    </div>
+                    <div class="skills-mix">
+                      <input class="skills-input" id="VanillaJS" type="checkbox" value="" hidden>
+                      <label class="skills-label" for="VanillaJS">VanillaJS</label>
+                    </div>
+                    <div class="skills-mix">
+                      <input class="skills-input" id="Git" type="checkbox" checked value="" hidden>
+                      <label class="skills-label" for="Git">Git</label>
+                    </div>
+                    <div class="skills-mix">
+                      <input class="skills-input" id="css3" type="checkbox" checked value="" hidden>
+                      <label class="skills-label" for="css3">css3</label>
+                    </div>
+                    <div class="skills-mix">
+                      <input class="skills-input" id="Less" type="checkbox" value="" hidden>
+                      <label class="skills-label" for="Less">Less</label>
+                    </div>
+                    <div class="skills-mix">
+                      <input class="skills-input" id="Angular" type="checkbox" value="" hidden>
+                      <label class="skills-label" for="Angular">Angular</label>
+                    </div>
+                    <div class="skills-mix">
+                      <input class="skills-input" id="Foundation" type="checkbox" value="" hidden>
+                      <label class="skills-label" for="Foundation">Foundation</label>
+                    </div>
+                    <div class="skills-mix">
+                      <input class="skills-input" id="БЭМ" type="checkbox" checked value="" hidden>
+                      <label class="skills-label" for="БЭМ">БЭМ</label>
+                    </div>
+                    <div class="skills-mix">
+                      <input class="skills-input" id="Gulp" type="checkbox" checked value="" hidden>
+                      <label class="skills-label" for="Gulp">Gulp</label>
+                    </div>
+                    <div class="skills-mix">
+                      <input class="skills-input" id="JQuery" type="checkbox" value="" hidden>
+                      <label class="skills-label" for="JQuery">JQuery</label>
+                    </div>
+                    <div class="skills-mix">
+                      <input class="skills-input" id="Bootstrap" type="checkbox" value="" hidden>
+                      <label class="skills-label" for="Bootstrap">Bootstrap</label>
+                    </div>
+        </form>
+      </section>
+      <section class="js">
+        <div class="js-speedo">
+          <div id="wrapper">
+            <svg id="meter">
+              <circle class="circle outline" id="outline_curves" cx="50%" cy="50%"></circle>
+              <circle class="circle range" id="low" cx="50%" cy="50%" stroke="#ffc815"></circle>
+              <circle class="circle range" id="avg" cx="50%" cy="50%" stroke="#a3cd3b"></circle>
+              <circle class="circle range" id="high" cx="50%" cy="50%" stroke="#0093d7"></circle>
+              <circle class="circle" id="mask" cx="50%" cy="50%"></circle>
+              <circle class="circle outline" id="outline_ends" cx="50%" cy="50%"></circle>
+            </svg>
+            <div class="meter-needle"><img id="meter_needle" src="images/needle.png" alt=""></div>
+            <input id="slider" type="range" min="0" max="100" value="17">
+            <div class="js-title">
+              <p class="title-skill">Мой уровень владения Java Script</p>
+              <label id="lbl" for="">0%</label>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/vendors.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

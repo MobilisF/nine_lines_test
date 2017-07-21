@@ -1,0 +1,287 @@
+*
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+
+body
+	padding: 60px 0 100px 0
+	font-family: 'Roboto', sans-serif
+
+.nine-lines
+	max-width: 660px
+	width: 100%
+	min-height: 654px
+	margin: 0 auto
+
+.questionary
+	position: relative
+	display: flex
+	min-height: 250px
+	height: 100%
+	padding: 10px
+	border-bottom: 2px solid #f4f3f3
+	background-image: url('../images/header-layer.png')
+
+	&-logo
+		margin: 10px
+		padding: 10px 0 0 0
+
+.logo-img
+	height: 138px
+	border-radius: 50%
+	filter: grayscale(100%)
+	transition-duration: 0.4s
+
+	&:hover
+		filter: none
+
+.questionary-form
+	margin: 10px
+
+.form-name-line,
+.form-date-line,
+.form-city-line,
+.form-contacts-line
+	max-width: 460px
+	min-width: 280px
+	width: 100%
+	padding: 8px 0 8px 3px //двигаем инпут на 3пикс чтобы его не задевал outline
+	margin: 10px 0
+	text-transform: uppercase
+	font-family: 'Roboto'
+	font-weight: 500
+	font-size: 12px
+	color: #666666
+	background: none
+	border: none
+	border-bottom: 2px solid #333333
+	&:focus
+		border-color: transparent
+		outline: 1px solid #0093d7
+		outline-radius: 5px
+
+.postlogo-img
+	position: absolute
+	width: 27.88%
+	right: 4px
+	bottom: 11px
+	animation: bounce-in-bck 1.1s both
+	animation-delay: 1s
+
+
+@keyframes bounce-in-bck 
+	0%
+		transform: scale(4)
+		animation-timing-function: ease-in
+		opacity: 0
+	38%
+		transform: scale(1)
+		animation-timing-function: ease-out
+		opacity: 0.2
+	55%
+		transform: scale(1.5)
+		animation-timing-function: ease-in
+		opacity: 0.4
+	72%
+		transform: scale(1)
+		animation-timing-function: ease-out
+		opacity: 0.6
+	81%
+		transform: scale(1.24)
+		animation-timing-function: ease-in
+		opacity: 0.8
+	89%
+		transform: scale(1)
+		animation-timing-function: ease-out
+	95%
+		transform: scale(1.04)
+		animation-timing-function: ease-in
+	100%
+		transform: scale(1)
+		animation-timing-function: ease-out
+
+
+@media screen and (max-width: 550px)
+
+	body
+		padding: 0 0 40px 0
+
+	.questionary
+		flex-direction: column
+		padding: 5px
+
+	.questionary-logo
+		margin: 0 auto
+
+	.form-name-line,
+	.form-date-line,
+	.form-city-line,
+	.form-contacts-line
+		margin: 5px 0
+		font-size: 14px
+
+	.postlogo-img
+		width: 35%
+
+@media screen and (max-width: 360px)
+
+	.form-name-line,
+	.form-date-line,
+	.form-city-line,
+	.form-contacts-line
+		font-size: 15px
+	.postlogo-img
+		opacity: 0.4
+
+.skills
+	min-height: 250px
+	height: 100%
+	padding: 10px
+	border-bottom: 2px solid #f4f3f3
+	background-image: url('../images/header-layer.png')
+
+	&-header
+		margin: 25px 10px 10px 10px
+		font-size: 18px
+		color: #010101
+
+	&-form
+		display: flex
+		flex-wrap: wrap
+		margin: 5px 10px
+	&-mix
+		position: relative
+		display: flex
+		align-items: center
+		height: 20px
+		width: 155px
+		margin: 10px 0 30px 0
+
+	&-input
+		height: 20px
+		width: 20px
+		
+		
+
+	&-label
+		padding-left: 28px
+		font-size: 12px
+		color: #666666
+		text-transform: uppercase
+		cursor: pointer
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked 
+	display: none
+  
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before 
+	content: ''
+	position: absolute
+	left: 0
+	top: 0
+	width: 20px
+	height: 20px
+	border: none
+	background: #eeeeee
+	border-radius: 5px
+
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after
+	content: ''
+	position: absolute
+	top: 0
+	left: 0
+	width: 20px
+	height: 20px
+	background: url('../images/check.png') no-repeat
+	transition: all 0.2s
+
+[type="checkbox"]:not(:checked) + label:after 
+	opacity: 0
+	transform: scale(0)
+
+[type="checkbox"]:checked + label:after 
+	opacity: 1
+	transform: scale(1)
+
+
+@media screen and (max-width: 425px)
+
+	.skills-header
+		display: flex
+		justify-content: center
+	.skills-mix
+		width: 50%
+
+
+
+.js
+	min-height: 250px
+	height: 100%
+	padding: 20px
+	background-image: url('../images/header-layer.png')
+
+
+#wrapper
+	position: relative
+	display: flex
+	height: 200px
+	overflow: hidden
+
+#meter
+
+	width: 255px
+	height: 300px
+	transform: rotateX(180deg)
+
+
+.circle
+	fill: none
+
+.outline,
+#mask
+	stroke: #eeeeee
+	stroke-width: 62
+
+.range
+	stroke-width: 60
+
+#slider
+	position: absolute
+	left: 25px
+	margin: auto
+	bottom: 0
+	width: 200px
+
+#lbl
+	border-radius: 2px
+	font-size: 50px
+	font-weight: 900
+	padding: 4px 4px 2px 4px
+	color: #0093d7
+	right: 100px
+	top: 100px
+
+.title-skill
+	font-size: 18px
+	color: #010101
+
+.meter-needle
+	position: absolute
+	top: 95px
+	left: 120px
+
+#meter_needle
+	height: 60px
+	transform: rotate(270deg)
+	transform-origin: bottom center
+
+
+.js-title
+	width: 200px
+	margin: 50px 0 0 50px
+
+
+
+
