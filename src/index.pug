@@ -1,10 +1,6 @@
 include pug/project-settings.pug
 include pug/mixins/mixins.pug
 
-//g- (global) префикс для глобальных классов. (Например, для задания невидимых элементов g-hidden.)
-//b- (block) префикс для выделения элементов, относящихся к структуре документа. 
-//js- (JavaScript) префикс для выделения элементов для селекторов js. 
-
 doctype html
 html
 	head(lang="en")
@@ -21,12 +17,12 @@ html
 				.questionary-logo
 					img.logo-img(src="images/logo.png" alt="")
 				form.questionary-form
-					input.form-name-line(type="text" placeholder="ИМЯ" value="Nikita")
-					input.form-date-line(type="text" placeholder="ДАТА РОЖДЕНИЯ" value="18.02.1990")
-					input.form-city-line(type="text" placeholder="ГОРОД" value="Ulyanovsk")
-					input.form-contacts-line(type="text" placeholder="КОНТАКТНЫЕ ДАННЫЕ" value="nikitakalachev18@gmail.com")
+					input.form-name-line#input_name(type="text" placeholder="ИМЯ" value="")
+					input.form-date-line#input_date(type="text" placeholder="ДАТА РОЖДЕНИЯ" value="")
+					input.form-city-line#input_city(type="text" placeholder="ГОРОД" value="")
+					input.form-contacts-line#input_mail(type="text" placeholder="КОНТАКТНЫЕ ДАННЫЕ" value="")
 				.questionary-img
-					img.postlogo-img(src="images/postlogo.png" alt="")
+					img#postlogo_animation(src="images/postlogo.png" alt="")
 
 			section.skills
 				.skills-header
@@ -61,7 +57,7 @@ html
 							circle.circle.outline#outline_ends(cx="50%" cy="50%")
 						.meter-needle
 							img#meter_needle(src="images/needle.png" alt="")
-						input#slider(type="range" min="0" max="100" value="17")
+						
 						.js-title
 							p.title-skill Мой уровень владения Java Script
 							label#lbl(for="") 0%

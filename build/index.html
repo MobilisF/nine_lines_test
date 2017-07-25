@@ -1,7 +1,4 @@
-
-<!--g- (global) префикс для глобальных классов. (Например, для задания невидимых элементов g-hidden.)-->
-<!--b- (block) префикс для выделения элементов, относящихся к структуре документа. -->
-<!--js- (JavaScript) префикс для выделения элементов для селекторов js. --><!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head lang="en">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +13,12 @@
       <section class="questionary">
         <div class="questionary-logo"><img class="logo-img" src="images/logo.png" alt=""></div>
         <form class="questionary-form">
-          <input class="form-name-line" type="text" placeholder="ИМЯ" value="Nikita">
-          <input class="form-date-line" type="text" placeholder="ДАТА РОЖДЕНИЯ" value="18.02.1990">
-          <input class="form-city-line" type="text" placeholder="ГОРОД" value="Ulyanovsk">
-          <input class="form-contacts-line" type="text" placeholder="КОНТАКТНЫЕ ДАННЫЕ" value="nikitakalachev18@gmail.com">
+          <input class="form-name-line" id="input_name" type="text" placeholder="ИМЯ" value="">
+          <input class="form-date-line" id="input_date" type="text" placeholder="ДАТА РОЖДЕНИЯ" value="">
+          <input class="form-city-line" id="input_city" type="text" placeholder="ГОРОД" value="">
+          <input class="form-contacts-line" id="input_mail" type="text" placeholder="КОНТАКТНЫЕ ДАННЫЕ" value="">
         </form>
-        <div class="questionary-img"><img class="postlogo-img" src="images/postlogo.png" alt=""></div>
+        <div class="questionary-img"><img id="postlogo_animation" src="images/postlogo.png" alt=""></div>
       </section>
       <section class="skills">
         <div class="skills-header">
@@ -90,7 +87,6 @@
               <circle class="circle outline" id="outline_ends" cx="50%" cy="50%"></circle>
             </svg>
             <div class="meter-needle"><img id="meter_needle" src="images/needle.png" alt=""></div>
-            <input id="slider" type="range" min="0" max="100" value="17">
             <div class="js-title">
               <p class="title-skill">Мой уровень владения Java Script</p>
               <label id="lbl" for="">0%</label>

@@ -45,7 +45,7 @@ body
 	max-width: 460px
 	min-width: 280px
 	width: 100%
-	padding: 8px 0 8px 3px //двигаем инпут на 3пикс чтобы его не задевал outline
+	padding: 8px 0 8px 3px
 	margin: 10px 0
 	text-transform: uppercase
 	font-family: 'Roboto'
@@ -59,14 +59,15 @@ body
 		border-color: transparent
 		outline: 1px solid #0093d7
 		outline-radius: 5px
-
-.postlogo-img
+#postlogo_animation 
+	opacity: 0
+#postlogo_animation.postlogo-img
 	position: absolute
 	width: 27.88%
 	right: 4px
 	bottom: 11px
 	animation: bounce-in-bck 1.1s both
-	animation-delay: 1s
+	opacity: 1
 
 
 @keyframes bounce-in-bck 
@@ -100,11 +101,11 @@ body
 		transform: scale(1)
 		animation-timing-function: ease-out
 
+@media screen and (max-width: 768px)
+	body
+		padding: 0 0 0 0
 
 @media screen and (max-width: 550px)
-
-	body
-		padding: 0 0 40px 0
 
 	.questionary
 		flex-direction: column
@@ -160,8 +161,6 @@ body
 	&-input
 		height: 20px
 		width: 20px
-		
-		
 
 	&-label
 		padding-left: 28px
@@ -171,11 +170,11 @@ body
 		cursor: pointer
 
 [type="checkbox"]:not(:checked),
-[type="checkbox"]:checked 
+[type="checkbox"]:checked
 	display: none
   
 [type="checkbox"]:not(:checked) + label:before,
-[type="checkbox"]:checked + label:before 
+[type="checkbox"]:checked + label:before
 	content: ''
 	position: absolute
 	left: 0
@@ -197,11 +196,11 @@ body
 	background: url('../images/check.png') no-repeat
 	transition: all 0.2s
 
-[type="checkbox"]:not(:checked) + label:after 
+[type="checkbox"]:not(:checked) + label:after
 	opacity: 0
 	transform: scale(0)
 
-[type="checkbox"]:checked + label:after 
+[type="checkbox"]:checked + label:after
 	opacity: 1
 	transform: scale(1)
 
@@ -234,6 +233,8 @@ body
 	width: 255px
 	height: 300px
 	transform: rotateX(180deg)
+	overflow: hidden
+
 
 
 .circle
@@ -260,8 +261,6 @@ body
 	font-weight: 900
 	padding: 4px 4px 2px 4px
 	color: #0093d7
-	right: 100px
-	top: 100px
 
 .title-skill
 	font-size: 18px
@@ -277,11 +276,34 @@ body
 	transform: rotate(270deg)
 	transform-origin: bottom center
 
-
 .js-title
 	width: 200px
 	margin: 50px 0 0 50px
 
+@media screen and (max-width: 425px)
+
+	#wrapper
+		flex-direction: column
+		justify-content: center
+		min-height: 200px
+		height: 100%
+
+	#meter
+		padding-bottom: 0
+		justify-content: center
+		margin: 0 auto
+
+	.meter-needle
+		left: 50%
+		//right: auto
+
+	.js-title
+		margin: 0 auto
+		margin-top: -120px
+
+	#lbl
+		display: block
+		text-align: center
 
 
 
