@@ -13,7 +13,7 @@ html
 		include pug/svg.pug
 
 		.nine-lines
-			section.questionary
+			section.questionary.bg
 				.questionary-logo
 					img.logo-img(src="images/logo.png" alt="")
 				form.questionary-form
@@ -24,7 +24,7 @@ html
 				.questionary-img
 					img#postlogo_animation(src="images/postlogo.png" alt="")
 
-			section.skills
+			section.skills.bg
 				.skills-header
 					p.skills-title Навыки
 				form.skills-form
@@ -45,10 +45,10 @@ html
 					+skills-mix("", "JQuery", false)
 					+skills-mix("", "Bootstrap", false)
 					
-			section.js
+			section.js.bg
 				.js-speedo
-					#wrapper
-						svg#meter
+					.wrapper
+						svg.wrapper-meter
 							circle.circle.outline#outline_curves(cx="50%" cy="50%")
 							circle.circle.range#low(cx="50%" cy="50%" stroke="#ffc815")
 							circle.circle.range#avg(cx="50%" cy="50%" stroke="#a3cd3b")
@@ -61,7 +61,5 @@ html
 						.js-title
 							p.title-skill Мой уровень владения Java Script
 							label#lbl(for="") 0%
-
-
 
 		include pug/scripts.pug

@@ -13,14 +13,16 @@ body
 	min-height: 654px
 	margin: 0 auto
 
-.questionary
-	position: relative
-	display: flex
+.bg
 	min-height: 250px
 	height: 100%
 	padding: 10px
-	border-bottom: 2px solid #f4f3f3
 	background-image: url('../images/header-layer.png')
+
+.questionary
+	position: relative
+	display: flex
+	border-bottom: 2px solid #f4f3f3
 
 	&-logo
 		margin: 10px
@@ -47,30 +49,32 @@ body
 	width: 100%
 	padding: 8px 0 8px 3px
 	margin: 10px 0
+	border: none
+	border-bottom: 2px solid #333333
 	text-transform: uppercase
 	font-family: 'Roboto'
 	font-weight: 500
 	font-size: 12px
 	color: #666666
 	background: none
-	border: none
-	border-bottom: 2px solid #333333
+	
+	
 	&:focus
 		border-color: transparent
 		outline: 1px solid #0093d7
 		outline-radius: 5px
 
 #postlogo_animation 
+	position: absolute
 	opacity: 0
-	position: absolute
-
-#postlogo_animation.postlogo-img
-	position: absolute
-	width: 27.88%
-	right: 4px
-	bottom: 11px
-	animation: bounce-in-bck 1.1s both
-	opacity: 1
+	
+	&.postlogo-img
+		position: absolute
+		width: 27.88%
+		right: 4px
+		bottom: 11px
+		animation: bounce-in-bck 1.1s both
+		opacity: 1
 
 
 @keyframes bounce-in-bck 
@@ -104,9 +108,12 @@ body
 		transform: scale(1)
 		animation-timing-function: ease-out
 
+
 @media screen and (max-width: 768px)
+	
 	body
 		padding: 0 0 0 0
+
 
 @media screen and (max-width: 550px)
 
@@ -114,8 +121,8 @@ body
 		flex-direction: column
 		padding: 5px
 
-	.questionary-logo
-		margin: 0 auto
+		&-logo
+			margin: 0 auto
 
 	.form-name-line,
 	.form-date-line,
@@ -127,6 +134,7 @@ body
 	.postlogo-img
 		width: 35%
 
+
 @media screen and (max-width: 360px)
 
 	.form-name-line,
@@ -134,15 +142,13 @@ body
 	.form-city-line,
 	.form-contacts-line
 		font-size: 15px
-	.postlogo-img
+
+	#postlogo_animation.postlogo-img
 		opacity: 0.4
 
+
 .skills
-	min-height: 250px
-	height: 100%
-	padding: 10px
 	border-bottom: 2px solid #f4f3f3
-	background-image: url('../images/header-layer.png')
 
 	&-header
 		margin: 25px 10px 10px 10px
@@ -213,32 +219,22 @@ body
 	.skills-header
 		display: flex
 		justify-content: center
+
 	.skills-mix
 		width: 50%
 
 
-
-.js
-	min-height: 250px
-	height: 100%
-	padding: 20px
-	background-image: url('../images/header-layer.png')
-
-
-#wrapper
+.wrapper
 	position: relative
 	display: flex
 	height: 200px
 	overflow: hidden
 
-#meter
-
-	width: 255px
-	height: 300px
-	transform: rotateX(180deg)
-	overflow: hidden
-
-
+	&-meter
+		width: 255px
+		height: 300px
+		transform: rotateX(180deg)
+		overflow: hidden
 
 .circle
 	fill: none
@@ -254,15 +250,15 @@ body
 #slider
 	position: absolute
 	left: 25px
-	margin: auto
 	bottom: 0
 	width: 200px
+	margin: auto
 
 #lbl
+	padding: 4px 4px 2px 4px
 	border-radius: 2px
 	font-size: 50px
 	font-weight: 900
-	padding: 4px 4px 2px 4px
 	color: #0093d7
 
 .title-skill
@@ -285,20 +281,19 @@ body
 
 @media screen and (max-width: 425px)
 
-	#wrapper
+	.wrapper
 		flex-direction: column
 		justify-content: center
 		min-height: 200px
 		height: 100%
 
-	#meter
-		padding-bottom: 0
-		justify-content: center
-		margin: 0 auto
+		&-meter
+			padding-bottom: 0
+			justify-content: center
+			margin: 0 auto
 
 	.meter-needle
 		left: 50%
-		//right: auto
 
 	.js-title
 		margin: 0 auto
