@@ -53,13 +53,13 @@ html
 							circle.circle.range#low(cx="50%" cy="50%" stroke="#ffc815")
 							circle.circle.range#avg(cx="50%" cy="50%" stroke="#a3cd3b")
 							circle.circle.range#high(cx="50%" cy="50%" stroke="#0093d7")
-							circle.circle#mask(cx="50%" cy="50%")
+							circle.circle.mask#mask(cx="50%" cy="50%")
 							circle.circle.outline#outline_ends(cx="50%" cy="50%")
-						.meter-needle
-							img#meter_needle(src="images/needle.png" alt="")
+						.wrapper-needle
+							img.meter_needle#meter_needle(src="images/needle.png" alt="")
 						
-						.js-title
+						.wrapper-title
 							p.title-skill Мой уровень владения Java Script
-							label#lbl(for="") 0%
+							label.lbl#lbl(for="") 0%
 
 		include pug/scripts.pug
