@@ -1,6 +1,6 @@
 setTimeout(function typing() {
 
-	var fields = document.querySelectorAll('input');
+	var fields = document.querySelectorAll('.input-auto');
 	var text = ["Nikita Kalachev", "18 feb 1990", "Ulyanovsk", "nikitakalachev18@gmail.com"];
 
 	function print(input, num, timeout) {
@@ -11,11 +11,9 @@ setTimeout(function typing() {
 			input.value = text[num].substr(0, i);
 			setTimeout(type, 100);
 				}
-				console.log(text[num].length);
 				i++;
 			}
 			type();
-			console.log(type());
 			if (num == 3) {
 			setTimeout(
 				function () {
@@ -75,14 +73,30 @@ function range_change_event(percent) {
 	lbl.textContent = percent + '%';
 }
 
+var interval
+
 function animate () {
 	range_change_event(js_value);
-	var interval = setInterval(function(){
-		if (js_value <17) {
+	interval = setInterval(function(){
+		if (js_value <=99) {
 			js_value+=1;
 			range_change_event(js_value)
+			if (js_value == 99) {
+				clearInterval(interval)
+				animate2 ()
+			}
 		}
-	},500);
+	},100);
+}
+
+function animate2 () {
+	range_change_event(js_value);
+	interval = setInterval(function(){
+		if (js_value >14) {
+			js_value-=1;
+			range_change_event(js_value)
+		}
+	},70);
 }
 
 function animate_bounce () {
