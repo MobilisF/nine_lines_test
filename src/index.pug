@@ -5,67 +5,39 @@ doctype html
 html
 	head(lang="en")
 		include pug/metatags.pug
-		+title('Главная')
+		+title('leko-team_test-task')
 		include pug/styles.pug
-		link(href="https://fonts.googleapis.com/css?family=Roboto:500,900", rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700&amp;subset=cyrillic" rel="stylesheet")
 
 	body
 		include pug/svg.pug
 
-		.nine-lines
-			section.questionary.bg
-				.questionary-logo
-					img.logo-img(src="images/logo.png" alt="")
-				form.questionary-form
-					input.form-name-line.input-auto#input_name(type="text" placeholder="ИМЯ" value="")
-					input.form-date-line.input-auto#input_date(type="text" placeholder="ДАТА РОЖДЕНИЯ" value="")
-					input.form-city-line.input-auto#input_city(type="text" placeholder="ГОРОД" value="")
-					input.form-contacts-line.input-auto#input_mail(type="text" placeholder="КОНТАКТНЫЕ ДАННЫЕ" value="")
-				.questionary-img
-					img#postlogo_animation(src="images/postlogo.png" alt="")
+		.leko-team
+			section.form-wrapper
+				.form-wrapper_img
+					header.form-content
+						img#form-content_logo(src="images/header-logo__img.png" alt="")
+						h1.form-content_header Потребительский Кредит от <b>16.9%</b>
+						.form-service
+							.form-service_item
+								svg.form-service_svg 
+									circle.form-service_circle(r="5" cx="50%" cy="50%" fill="#ffffff")
+								span Снижаем ставку на <b>1%</b> каждый год
+							.form-service_item
+								svg.form-service_svg 
+									circle.form-service_circle(r="5" cx="50%" cy="50%" fill="#ffffff")
+								span Без комиссии, залога и поручителей
+							.form-service_item
+								svg.form-service_svg 
+									circle.form-service_circle(r="5" cx="50%" cy="50%" fill="#ffffff")
+								span Оформим за&nbsp;<b>5 минут</b>
+							.form-service_item
+								svg.form-service_svg 
+									circle.form-service_circle(r="5" cx="50%" cy="50%" fill="#ffffff")
+								span Долгосрочное погашение
 
-			section.skills.bg
-				.skills-header
-					p.skills-title Навыки
-				form.skills-form
-					mixin skills-mix( input, label, checked)
-						.skills-mix
-							input.skills-input(id=label type="checkbox" checked=checked value=input hidden)
-							label.skills-label(for=label)= label
-					+skills-mix("", "html5", true)
-					+skills-mix("", "sass", true)
-					+skills-mix("", "VanillaJS", false)
-					+skills-mix("", "Git", true)
-					+skills-mix("", "css3", true)
-					+skills-mix("", "Less", false)
-					+skills-mix("", "Angular", false)
-					+skills-mix("", "Foundation", false)
-					+skills-mix("", "БЭМ", true)
-					+skills-mix("", "Gulp", true)
-					+skills-mix("", "JQuery", false)
-					+skills-mix("", "Bootstrap", false)
-					
-			section.js.bg
-				.js-speedo
-					.wrapper
-						svg.wrapper-meter
-							circle.circle.outline#outline_curves(cx="50%" cy="50%")
-							circle.circle.range#low(cx="50%" cy="50%" stroke="#ffc815")
-							circle.circle.range#avg(cx="50%" cy="50%" stroke="#a3cd3b")
-							circle.circle.range#high(cx="50%" cy="50%" stroke="#0093d7")
-							circle.circle.mask#mask(cx="50%" cy="50%")
-							circle.circle.outline#outline_ends(cx="50%" cy="50%")
-						.wrapper-needle
-							img.meter_needle#meter_needle(src="images/needle.png" alt="")
-						
-						.wrapper-title
-							p.title-skill Мой уровень владения Java Script
-							label.lbl#lbl(for="") 0%
+				.form-wrapper_whitespace
+
+			
 
 		include pug/scripts.pug
-		
-		
-					section.bg
-						.btb_test bitbucket test feature
-						.13 2 commit
-				
